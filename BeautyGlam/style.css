@@ -1,0 +1,332 @@
+/* ===========================
+   ESTILOS GENERALES
+=========================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+    font-family:Arial, Helvetica, sans-serif;
+    background:#fff5f8;
+    color:#333;
+}
+
+/* ===========================
+   NAVBAR
+=========================== */
+
+.navbar{
+    background:#ff4f93;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 40px;
+    position:sticky;
+    top:0;
+    z-index:1000;
+}
+
+.logo{
+    color:#fff;
+    font-size:28px;
+    font-weight:bold;
+}
+
+.navbar nav{
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.navbar nav a{
+    color:white;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.navbar nav a:hover{
+    color:#ffe4ef;
+}
+
+.btn-login{
+    background:white;
+    color:#ff4f93 !important;
+    padding:8px 15px;
+    border-radius:20px;
+}
+
+.btn-login:hover{
+    background:#ffe4ef;
+}
+
+/* ===========================
+   CONTENEDOR
+=========================== */
+
+.contenedor{
+    width:90%;
+    max-width:1200px;
+    margin:40px auto;
+}
+
+/* ===========================
+   BIENVENIDA
+=========================== */
+
+.bienvenida{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    gap:40px;
+    margin-top:40px;
+}
+
+.texto{
+    flex:1;
+}
+
+.texto h1{
+    color:#ff4f93;
+    font-size:40px;
+    margin-bottom:20px;
+}
+
+.texto p{
+    font-size:18px;
+    line-height:1.8;
+}
+
+.imagen{
+    flex:1;
+    text-align:center;
+}
+
+.imagen-bienvenida{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* ===========================
+   CATÁLOGO
+=========================== */
+
+.catalogo{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+}
+
+.card{
+    background:white;
+    border-radius:10px;
+    padding:15px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-5px);
+}
+
+.card img{
+    width:100%;
+    height:180px;
+    object-fit:cover;
+    border-radius:10px;
+}
+
+.card h3{
+    margin:15px 0;
+}
+
+.card p{
+    color:#ff4f93;
+    font-size:20px;
+    font-weight:bold;
+}
+
+.card button{
+    background:#ff4f93;
+    color:white;
+    border:none;
+    padding:10px 15px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#d63384;
+}
+
+/* ===========================
+   FORMULARIOS
+=========================== */
+
+form{
+    display:flex;
+    flex-direction:column;
+}
+
+input,
+select,
+textarea{
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:16px;
+}
+
+button{
+    background:#ff4f93;
+    color:white;
+    border:none;
+    padding:12px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:#d63384;
+}
+
+/* ===========================
+   LOGIN
+=========================== */
+
+.main{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:80vh;
+}
+
+.login-card{
+    background:white;
+    width:100%;
+    max-width:380px;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.15);
+}
+
+.login-card h2{
+    color:#ff4f93;
+    text-align:center;
+    margin-bottom:20px;
+}
+
+/* ===========================
+   CARRITO
+=========================== */
+
+.item{
+    background:white;
+    padding:15px;
+    margin-bottom:15px;
+    border-radius:10px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+}
+
+.item button{
+    margin-top:10px;
+}
+
+#total{
+    color:#ff4f93;
+    font-size:24px;
+    font-weight:bold;
+}
+
+/* ===========================
+   CONTACTO
+=========================== */
+
+.contacto{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    text-align:center;
+    box-shadow:0 2px 10px rgba(0,0,0,.1);
+}
+
+.contacto p{
+    margin:15px 0;
+    font-size:18px;
+}
+
+.contacto a{
+    color:#ff4f93;
+    text-decoration:none;
+}
+
+.contacto a:hover{
+    text-decoration:underline;
+}
+
+.mapa{
+    width:100%;
+    max-width:500px;
+    border-radius:10px;
+    margin-top:20px;
+}
+
+/* ===========================
+   FOOTER
+=========================== */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:50px;
+}
+
+footer a{
+    color:#ffb6d2;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* ===========================
+   RESPONSIVE
+=========================== */
+
+@media(max-width:768px){
+
+.navbar{
+    flex-direction:column;
+    text-align:center;
+}
+
+.navbar nav{
+    margin-top:15px;
+    justify-content:center;
+}
+
+.bienvenida{
+    flex-direction:column;
+    text-align:center;
+}
+
+.texto h1{
+    font-size:30px;
+}
+
+.catalogo{
+    grid-template-columns:1fr;
+}
+
+}

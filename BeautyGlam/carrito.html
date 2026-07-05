@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito | Beauty Glam</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- MENÚ -->
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">🛒 Carrito</a></li>
+    </ul>
+</nav>
+
+<!-- CONTENEDOR -->
+<div class="contenedor">
+    <h2>🛒 Tu Carrito</h2>
+
+    <div id="listaCarrito"></div>
+
+    <h3>Total: <span id="total">$0.00</span></h3>
+
+    <div class="acciones">
+        <a href="compra.html">
+            <button>Finalizar Compra</button>
+        </a>
+    </div>
+</div>
+
+<!-- PIE DE PÁGINA -->
+<footer>
+    <p>&copy; 2026 Beauty Glam - Todos los derechos reservados.</p>
+</footer>
+
+<!-- JavaScript -->
+<script src="script.js"></script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+    if (typeof mostrarCarrito === "function") {
+        mostrarCarrito();
+    }
+});
+</script>
+
+</body>
+</html>

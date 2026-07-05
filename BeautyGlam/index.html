@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beauty Glam | Inicio</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    margin:0;
+    padding:0;
+    background:#fff5f8;
+}
+
+/* Menú */
+nav{
+    background:#ff4f93;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#ffe4ef;
+}
+
+/* Bienvenida */
+.bienvenida{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    max-width:1200px;
+    margin:50px auto;
+    padding:20px;
+    gap:30px;
+}
+
+.texto{
+    flex:1;
+}
+
+.texto h1{
+    color:#ff4f93;
+    font-size:40px;
+}
+
+.texto p{
+    font-size:20px;
+    color:#555;
+    line-height:1.6;
+}
+
+.imagen{
+    flex:1;
+    text-align:center;
+}
+
+.imagen img{
+    width:100%;
+    max-width:500px;
+    border-radius:15px;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+/* Footer */
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
+
+footer a{
+    color:#ffb6d2;
+    text-decoration:none;
+}
+
+footer a:hover{
+    text-decoration:underline;
+}
+
+/* Responsive */
+@media(max-width:768px){
+
+.bienvenida{
+    flex-direction:column;
+    text-align:center;
+}
+
+.texto h1{
+    font-size:30px;
+}
+
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+
+<a href="index.html">Inicio</a>
+
+<a href="nosotros.html">Nosotros</a>
+
+<a href="productos.html">Productos</a>
+
+<a href="catalogo.html">Catálogo</a>
+
+<a href="contacto.html">Contacto</a>
+
+<a href="carrito.html">🛒 Carrito</a>
+
+<a href="login.html">Iniciar Sesión</a>
+
+</nav>
+
+<section class="bienvenida">
+
+<div class="texto">
+
+<h1>💖 Bienvenida a Beauty Glam</h1>
+
+<p>
+Descubre una amplia variedad de productos de belleza, maquillaje,
+cuidado facial y accesorios para resaltar tu estilo.
+</p>
+
+<p>
+En Beauty Glam trabajamos para ofrecer productos de calidad,
+excelente atención y la mejor experiencia de compra.
+</p>
+
+</div>
+
+<div class="imagen">
+
+<img src="img/Portada.jpeg" alt="Beauty Glam">
+
+</div>
+
+</section>
+
+<footer>
+
+<h3>Beauty Glam</h3>
+
+<p>
+📧
+<a href="mailto:beautyglam@gmail.com">
+beautyglam@gmail.com
+</a>
+</p>
+
+<p>
+📱
+<a href="https://wa.me/593968940686" target="_blank">
++593 96 894 0686
+</a>
+</p>
+
+<p>📍 Quito - Calderón</p>
+
+<p>&copy; 2026 Beauty Glam | Todos los derechos reservados.</p>
+
+</footer>
+
+</body>
+</html>

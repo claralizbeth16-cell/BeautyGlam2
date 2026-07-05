@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login | Beauty Glam</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family:Arial,sans-serif;
+    background:#fff5f8;
+    margin:0;
+    display:flex;
+    flex-direction:column;
+    min-height:100vh;
+}
+
+nav{
+    background:#ff4f93;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.main{
+    flex:1;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+
+.login-card{
+    background:white;
+    padding:30px;
+    width:100%;
+    max-width:350px;
+    border-radius:12px;
+    box-shadow:0 8px 20px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+.login-card h2{
+    color:#ff4f93;
+}
+
+.login-card input{
+    width:100%;
+    padding:12px;
+    margin:10px 0;
+    border:1px solid #ddd;
+    border-radius:8px;
+    box-sizing:border-box;
+}
+
+.login-card button{
+    width:100%;
+    padding:12px;
+    background:#ff4f93;
+    color:white;
+    border:none;
+    border-radius:8px;
+    font-weight:bold;
+    cursor:pointer;
+}
+
+.login-card button:hover{
+    background:#e63b7d;
+}
+
+.login-card p{
+    margin-top:15px;
+}
+
+.login-card a{
+    color:#ff4f93;
+    text-decoration:none;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+<a href="index.html">Inicio</a>
+<a href="productos.html">Productos</a>
+<a href="catalogo.html">Catálogo</a>
+<a href="contacto.html">Contacto</a>
+<a href="carrito.html">Carrito</a>
+</nav>
+
+<div class="main">
+
+<div class="login-card">
+
+<h2>💖 Iniciar Sesión</h2>
+
+<form id="loginForm">
+
+<input
+type="email"
+id="correo"
+placeholder="Correo electrónico"
+required>
+
+<input
+type="password"
+id="password"
+placeholder="Contraseña"
+required>
+
+<button type="submit">
+Entrar
+</button>
+
+<p>
+¿No tienes cuenta?
+<a href="crear-cuenta.html">
+Crear cuenta
+</a>
+</p>
+
+</form>
+
+</div>
+
+</div>
+
+<footer>
+
+<p>© 2026 Beauty Glam | Todos los derechos reservados.</p>
+
+</footer>
+
+<script>
+
+document.getElementById("loginForm").addEventListener("submit",function(e){
+
+e.preventDefault();
+
+let usuario=JSON.parse(localStorage.getItem("usuario"));
+
+if(usuario==null){
+
+alert("No existe ninguna cuenta registrada.");
+
+return;
+
+}
+
+let correo=document.getElementById("correo").value;
+
+let password=document.getElementById("password").value;
+
+if(correo===usuario.correo && password===usuario.password){
+
+localStorage.setItem("sesion","activa");
+
+alert("✅ Bienvenido "+usuario.nombre);
+
+window.location.href="index.html";
+
+}else{
+
+alert("❌ Correo o contraseña incorrectos.");
+
+}
+
+});
+
+</script>
+
+</body>
+</html>

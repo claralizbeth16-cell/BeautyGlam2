@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Catálogo | Beauty Glam</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+.contenedor{
+    max-width:1000px;
+    margin:40px auto;
+    padding:20px;
+}
+
+.catalogo{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+}
+
+.card{
+    background:white;
+    border-radius:8px;
+    box-shadow:0 2px 8px rgba(0,0,0,.1);
+    text-align:center;
+    padding:10px;
+}
+
+.card img{
+    width:100%;
+    height:120px;
+    object-fit:cover;
+    border-radius:6px;
+}
+
+.card h3{
+    margin:10px 0 5px;
+    color:#333;
+    font-size:16px;
+}
+
+.card p{
+    color:#e91e63;
+    font-weight:bold;
+}
+
+.card button{
+    background:#e91e63;
+    color:white;
+    border:none;
+    padding:8px 12px;
+    border-radius:5px;
+    cursor:pointer;
+}
+
+.card button:hover{
+    background:#c2185b;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <ul>
+        <li><a href="index.html">Inicio</a></li>
+        <li><a href="nosotros.html">Nosotros</a></li>
+        <li><a href="productos.html">Productos</a></li>
+        <li><a href="catalogo.html">Catálogo</a></li>
+        <li><a href="contacto.html">Contacto</a></li>
+        <li><a href="carrito.html">🛒 Carrito</a></li>
+    </ul>
+</nav>
+
+<div class="contenedor">
+
+<h2>✨ Catálogo de Productos</h2>
+
+<div class="catalogo">
+
+<div class="card">
+<img src="img/base.gif" alt="Base Líquida">
+<h3>Base Líquida</h3>
+<p>$12.00</p>
+<button onclick="agregarCarrito('Base Líquida',12)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+<img src="img/labial.jpg" alt="Labial Mate">
+<h3>Labial Mate</h3>
+<p>$8.00</p>
+<button onclick="agregarCarrito('Labial Mate',8)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+<img src="img/rubor.jpg" alt="Rubor">
+<h3>Rubor</h3>
+<p>$10.00</p>
+<button onclick="agregarCarrito('Rubor',10)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+<img src="img/delineador.jpg" alt="Delineador">
+<h3>Delineador</h3>
+<p>$6.00</p>
+<button onclick="agregarCarrito('Delineador',6)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+<img src="img/mascara.jpg" alt="Máscara de pestañas">
+<h3>Máscara de pestañas</h3>
+<p>$9.00</p>
+<button onclick="agregarCarrito('Máscara de pestañas',9)">Agregar al carrito</button>
+</div>
+
+<div class="card">
+<img src="img/paleta.gif" alt="Paleta de Sombras">
+<h3>Paleta de Sombras</h3>
+<p>$18.00</p>
+<button onclick="agregarCarrito('Paleta de Sombras',18)">Agregar al carrito</button>
+</div>
+
+</div>
+
+</div>
+
+<footer>
+<p>&copy; 2026 Beauty Glam. Todos los derechos reservados.</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta http-equiv="refresh" content="2;url=index.html">
+<title>Cerrar sesión</title>
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#fff5f8;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    height:100vh;
+    margin:0;
+}
+
+.mensaje{
+    background:white;
+    padding:30px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+    text-align:center;
+}
+
+h2{
+    color:#e91e63;
+}
+</style>
+
+<script>
+// Elimina los datos guardados en el navegador
+localStorage.removeItem("usuario");
+sessionStorage.clear();
+localStorage.removeItem("carrito");
+
+// Redirige al inicio después de 2 segundos
+setTimeout(function(){
+    window.location.href="index.html";
+},2000);
+</script>
+
+</head>
+
+<body>
+
+<div class="mensaje">
+    <h2>✅ Sesión cerrada correctamente</h2>
+    <p>Serás redirigido al inicio...</p>
+</div>
+
+</body>
+</html>

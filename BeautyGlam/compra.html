@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Finalizar Compra | Beauty Glam</title>
+
+<link rel="stylesheet" href="style.css">
+
+<style>
+body{
+    font-family:Arial, sans-serif;
+    background:#fff5f8;
+    margin:0;
+}
+
+nav{
+    background:#e91e63;
+    padding:15px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:0 15px;
+    font-weight:bold;
+}
+
+.contenedor{
+    max-width:600px;
+    margin:40px auto;
+    background:white;
+    padding:25px;
+    border-radius:10px;
+    box-shadow:0 2px 10px rgba(0,0,0,.15);
+}
+
+h2{
+    text-align:center;
+    color:#e91e63;
+}
+
+label{
+    display:block;
+    margin-top:15px;
+    font-weight:bold;
+}
+
+input,select{
+    width:100%;
+    padding:10px;
+    margin-top:5px;
+    border:1px solid #ccc;
+    border-radius:5px;
+    box-sizing:border-box;
+}
+
+button{
+    width:100%;
+    margin-top:20px;
+    padding:12px;
+    background:#e91e63;
+    color:white;
+    border:none;
+    border-radius:5px;
+    font-size:16px;
+    cursor:pointer;
+}
+
+button:hover{
+    background:#c2185b;
+}
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:15px;
+    margin-top:30px;
+}
+</style>
+
+</head>
+
+<body>
+
+<nav>
+    <a href="index.html">Inicio</a>
+    <a href="productos.html">Productos</a>
+    <a href="catalogo.html">Catálogo</a>
+    <a href="carrito.html">Carrito</a>
+    <a href="contacto.html">Contacto</a>
+</nav>
+
+<div class="contenedor">
+
+<h2>📝 Datos de la Compra</h2>
+
+<form id="formCompra">
+
+<label>Nombre</label>
+<input type="text" required>
+
+<label>Cédula</label>
+<input type="text" required>
+
+<label>Teléfono</label>
+<input type="text" required>
+
+<label>Correo</label>
+<input type="email" required>
+
+<label>Dirección</label>
+<input type="text" required>
+
+<label>Ciudad</label>
+<input type="text" required>
+
+<label>Método de pago</label>
+<select required>
+    <option>Pago contra entrega</option>
+</select>
+
+<button type="submit">Confirmar Compra</button>
+
+</form>
+
+</div>
+
+<footer>
+© 2026 Beauty Glam - Todos los derechos reservados.
+</footer>
+
+<script>
+document.getElementById("formCompra").addEventListener("submit",function(e){
+
+    e.preventDefault();
+
+    alert("🎉 ¡Compra realizada con éxito!\n\nGracias por comprar en Beauty Glam.");
+
+    localStorage.removeItem("carrito");
+
+    window.location.href="index.html";
+
+});
+</script>
+
+</body>
+</html>
